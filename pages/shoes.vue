@@ -1,14 +1,20 @@
 <script>
-import shoes from '~/data/shoes';
+import shoes from "~/data/shoes";
 export default {
-    data() {
-        return {
-            shoes: shoes,
-        }
-    }
-}
+  data() {
+    return {
+      shoes: shoes,
+      pageTitle: "Mens Shoes",
+    };
+  },
+};
 </script>
 
 <template>
-    <StoreTemplate :items="shoes"/>
+  <StoreTemplate
+    :categories="shoes.categories"
+    :gender="shoes.gender"
+    :items="shoes.shoes"
+    :pageTitle="pageTitle"
+  />
 </template>

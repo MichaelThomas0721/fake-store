@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ['~/css/main.css'],
   resolve: {
     alias: {
       fs: require.resolve('rollup-plugin-node-builtins')

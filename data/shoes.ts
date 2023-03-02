@@ -1,17 +1,53 @@
-export default [
+export default {
+  categories: [
+    "Basketball Shoes",
+    "Running Shoes",
+    "Soccer Shoes",
+    "Tennis Shoes",
+    "Volleyball Shoes",
+    "Sneakers",
+  ],
+  gender: [
+    "Men's",
+    "Women's",
+    "Unisex",
+    "Kids"
+  ],
+  shoes: [
   {
-    name: "Nike",
+    name: "Nike Air Jordan 1",
+    category: "Basketball Shoes",
     price: 100,
-    image: "/images/nikeairjordan1.png",
+    imageFolder: "/images/nikeairjordan1",
   },
   {
     name: "Adidas",
+    category: "Basketball Shoes",
     price: 200,
-    image: "/images/nikeairjordan1.png",
+    imageFolder: "/images/nikeairjordan1",
   },
   {
     name: "Puma",
+    category: "Basketball Shoes",
     price: 300,
-    image: "/images/nikeairjordan1.png",
+    imageFolder: "/images/nikeairjordan1",
   },
-];
+  {
+    name: "Puma",
+    category: "Basketball Shoes",
+    price: 300,
+    imageFolder: "/images/nikeairjordan1",
+  },
+  {
+    name: "Puma",
+    category: "Basketball Shoes",
+    price: 300,
+    imageFolder: "/images/nikeairjordan1",
+  },
+  {
+    name: "Puma",
+    category: "Basketball Shoes",
+    price: 300,
+    imageFolder: "/images/nikeairjordan1",
+  },
+]};
