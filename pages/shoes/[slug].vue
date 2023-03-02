@@ -1,44 +1,61 @@
 <script setup>
-import { ref } from "vue";
-const route = useRoute();
 
-let slug;
-if (route.params.slug) {
-  slug = route.params.slug;
+</script >
+
+<script>
+// import { ref } from "vue";
+// const route = useRoute();
+
+// let slug;
+// if (route.params.slug) {
+//   slug = route.params.slug;
+// }
+
+const baseURL = "/images/nikeairjordan1/";
+
+function CreateURLS(length) {
+  let images = [];
+  for (let i = 1; i <= length; i++) {
+    images.push(baseURL + i + ".png");
+  }
+  return images;
 }
 
-const images = import.meta.glob("@/images/nikeairjordan1/*.png");
-const imageURLs = Object.keys(images);
+const imageURLs = CreateURLS(8);
 let primaryIdx = 0;
 let primaryImage = ref(imageURLs[0]);
 
 function ChangeImage(idx) {
-  this.primaryImage = imageURLs[idx];
   this.primaryIdx = idx;
+  this.primaryImage = imageURLs[idx];
+}
+
+export default {
+  data() { 
+    return {
+      primaryIdx,
+      primaryImage,
+      imageURLs,
+    }
+  },
+  methods: {
+    ChangeImage,
+  }
 }
 </script>
 
 <template>
   <div>
-    <p class="text-6xl text-red-600">YUH:{{ slug }}</p>
     <div class="flex flex-row">
       <div class="flex flex-col gap-1">
-        <div
+        <SmallPreview
           v-for="(image, index) in imageURLs"
           :key="image"
-          class="h-20 w-20 object-cover overflow-hidden flex justify-center relative"
-          v-on:mouseover="() => ChangeImage(index)"
-        >
-          <div
-            :class="`w-full h-full bg-black bg-opacity-50 z-10 absolute ${
-              primaryIdx == index ? '' : 'hidden'
-            }`"
-          />
-          <img
-            :src="image"
-            class="h-[120%] w-[120%] aspect-square object-contain"
-          />
-        </div>
+          :image="image"
+          :index="index"
+          :primaryIdx="primaryIdx"
+          :ChangeImage="ChangeImage"
+        />
       </div>
       <div class="bg-slate-500">
         <img :src="primaryImage" class="h-[650px] object-contain" />

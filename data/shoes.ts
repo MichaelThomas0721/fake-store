@@ -19,35 +19,41 @@ export default {
     category: "Basketball Shoes",
     price: 100,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
   {
     name: "Adidas",
     category: "Basketball Shoes",
     price: 200,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
   {
     name: "Puma",
     category: "Basketball Shoes",
     price: 300,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
   {
     name: "Puma",
     category: "Basketball Shoes",
     price: 300,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
   {
     name: "Puma",
     category: "Basketball Shoes",
     price: 300,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
   {
     name: "Puma",
     category: "Basketball Shoes",
     price: 300,
     imageFolder: "/images/nikeairjordan1",
+    images: 8
   },
 ]};
