@@ -13,4 +13,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      fs: require.resolve('rollup-plugin-node-builtins')
+    }
+  }
 });
