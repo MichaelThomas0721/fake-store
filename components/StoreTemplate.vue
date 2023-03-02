@@ -13,7 +13,7 @@ const props = defineProps({
     required: true,
   },
   gender: {
-    type: String,
+    type: Array,
     required: true,
   },
 });
