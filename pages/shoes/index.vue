@@ -1,9 +1,9 @@
 <script>
-import shoes from "~/data/shoes";
+import Shoes from "~/data/shoes";
 export default {
   data() {
     return {
-      shoes: shoes,
+      shoes: Shoes(),
       pageTitle: "Mens Shoes",
     };
   },

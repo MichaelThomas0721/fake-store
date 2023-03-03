@@ -13,18 +13,19 @@ export default {
       type: Number,
       required: true,
     },
-    ChangeImage: {
-      type: Function,
-      required: true,
+  },
+  methods: {
+    UpdateParentState() {
+      this.$emit("update", this.index);
     },
-  }
+  },
 };
 </script>
 
 <template>
   <div
     class="h-20 w-20 object-cover overflow-hidden rounded-sm flex justify-center relative"
-    v-on:mouseover="() => this.ChangeImage(this.index)"
+    @mouseover="UpdateParentState(this.index)"
   >
     <div
       :class="`w-full h-full bg-black bg-opacity-50 z-10 absolute ${

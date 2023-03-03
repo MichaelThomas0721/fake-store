@@ -1,19 +1,7 @@
-<script setup>
-
-</script >
-
 <script>
-// import { ref } from "vue";
-// const route = useRoute();
+import Shoes from "~/data/shoes";
 
-// let slug;
-// if (route.params.slug) {
-//   slug = route.params.slug;
-// }
-
-const baseURL = "/images/nikeairjordan1/";
-
-function CreateURLS(length) {
+function CreateURLs(length) {
   let images = [];
   for (let i = 1; i <= length; i++) {
     images.push(baseURL + i + ".png");
@@ -21,27 +9,35 @@ function CreateURLS(length) {
   return images;
 }
 
-const imageURLs = CreateURLS(8);
-let primaryIdx = 0;
-let primaryImage = ref(imageURLs[0]);
-
-function ChangeImage(idx) {
-  this.primaryIdx = idx;
-  this.primaryImage = imageURLs[idx];
-}
-
 export default {
-  data() { 
-    return {
-      primaryIdx,
-      primaryImage,
-      imageURLs,
+  setup() {
+    const route = useRoute();
+    let slug;
+    if (route.params.slug) {
+      slug = route.params.slug;
     }
+    let shoe = Shoes({ shoes: { id: slug }})
+    let imageURLs = CreateURLs(8);
+    return { slug, imageURLs, shoe };
+  },
+  data() {
+    return {
+      primaryIdx: 0,
+      primaryImage: this.imageURLs[0],
+    };
   },
   methods: {
-    ChangeImage,
+    ChangeImage(idx) {
+      this.primaryIdx = idx;
+      this.primaryImage = this.imageURLs[idx];
+    },
+  },
+  mounted() {
+    console.log(this.shoe);
   }
-}
+};
+
+const baseURL = "/assets/images/nikeairjordan1/";
 </script>
 
 <template>
@@ -54,7 +50,7 @@ export default {
           :image="image"
           :index="index"
           :primaryIdx="primaryIdx"
-          :ChangeImage="ChangeImage"
+          @update="ChangeImage"
         />
       </div>
       <div class="bg-slate-500">
