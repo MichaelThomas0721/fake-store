@@ -5,12 +5,4 @@
   </div>
 </template>
 
-<style lang="css">
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  #app {
-    @apply min-h-screen font-sans;
-  }
-</style>
+<style lang="css" src="./assets/css/main.css"></style>

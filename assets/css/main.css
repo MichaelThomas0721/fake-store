@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+    @apply min-h-screen font-sans;
+  }
+
+.store-grid {
+  display: grid; 
+  grid-template-columns: 15em auto; 
+  grid-template-rows: auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+
+.display-grid {
+  display: grid; 
+  grid-template-rows: 40em 40em; 
+  grid-template-columns: auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+
+.testclass {
+  background-color: purple;
+  
+}
