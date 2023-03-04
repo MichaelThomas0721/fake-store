@@ -1,4 +1,9 @@
 <script>
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { BiBag } from "oh-vue-icons/icons";
+
+addIcons(BiBag);
+
 export default {
   data() {
     return {
@@ -9,13 +14,24 @@ export default {
       ],
     };
   },
+  props: {
+    cartItems: {
+      type: String,
+      default: 0,
+    },
+  },
+  components: {
+    "v-icon": OhVueIcon,
+  },
 };
 </script>
 
 <template>
   <div class="h-24 p-3 w-full bg-green-800 flex flex-row justify-between">
-    <div class="p-8 border-4 border-white rounded-lg flex items-center text-white text-2xl font-bold">
-        <p>Nice Apparel</p>
+    <div
+      class="p-8 border-4 border-white rounded-lg flex items-center text-white text-2xl font-bold"
+    >
+      <p>Nice Apparel</p>
     </div>
     <div class="flex flex-row gap-10 h-full items-center mx-3">
       <NavButton
@@ -24,6 +40,14 @@ export default {
         :pageUrl="button.pageUrl"
         :text="button.text"
       />
+      <button
+        class="flex flex-row text-white justify-center items-center wrenchAnimation pointer-events-auto"
+      >
+        <v-icon name="bi-bag" inverse scale="2" />
+        <p class="absolute translate-y-[3px] pointer-events-none">
+          {{ cartItems }}
+        </p>
+      </button>
     </div>
   </div>
 </template>

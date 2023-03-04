@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         },
       },
     },
+    transpile: ["oh-vue-icons"],
   },
   css: ["@/assets/css/main.css"],
   resolve: {

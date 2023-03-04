@@ -11,7 +11,10 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<!-- <style lang="postcss" scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .home {
   @apply h-screen flex flex-row items-center justify-center text-gray-600;
   @apply dark:bg-gray-900 dark:text-gray-100;
@@ -35,4 +38,4 @@
     }
   }
 }
-</style>
+</style> -->

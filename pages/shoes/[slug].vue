@@ -40,9 +40,15 @@ export default {
         this.$route.path + "?size=" + this.selectedSize
       );
     },
-  },
-  mounted() {
-    console.log(this.shoe);
+    AddToCart() {
+      let items = localStorage.getItem("items");
+      items = parseInt(items);
+      localStorage.setItem("items", items + 1);
+      this.UpdateCartState();
+    },
+    UpdateCartState() {
+      this.$emit("updateCart");
+    },
   },
 };
 
@@ -75,7 +81,12 @@ const baseURL = "/assets/images/nikeairjordan1/";
           :selectedSize="selectedSize"
           @update="ChangeSize"
         />
-        <button class="text-white w-full h-12 rounded-full">Add to Cart</button>
+        <button
+          class="text-white w-full h-12 rounded-full bg-gray-900 hover:bg-gray-700"
+          @click="AddToCart"
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   </div>

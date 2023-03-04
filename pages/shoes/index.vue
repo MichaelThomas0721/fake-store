@@ -11,12 +11,10 @@ export default {
 </script>
 
 <template>
-<p class="bg-red-300">YUH</p>
   <StoreTemplate
     :categories="shoes.categories"
     :gender="shoes.gender"
     :items="shoes.shoes"
     :pageTitle="pageTitle"
   />
-  
 </template>

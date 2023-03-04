@@ -28,3 +28,37 @@
   background-color: purple;
   
 }
+
+.wrenchAnimation:hover {
+  animation-name: my-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes my-animation {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(10deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(1deg);
+    },
+    100% {
+        transform: rotate(50deg);
+    }
+    
+}
+.animate-test :hover {
+    animation: spin 1s linear infinite;
+}
