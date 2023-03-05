@@ -41,9 +41,19 @@ export default {
       );
     },
     AddToCart() {
-      let items = localStorage.getItem("items");
-      items = parseInt(items);
-      localStorage.setItem("items", items + 1);
+      if (!localStorage) return;
+      let items = JSON.parse(localStorage.getItem("items"));
+      console.log(items)
+      console.log(typeof items);
+      if (typeof items == Array || typeof items == "object") {
+        items.push(this.shoe.id);
+        localStorage.setItem("items", JSON.stringify(items));
+        console.log("THIS ONE");
+      } else {
+        localStorage.setItem("items", JSON.stringify([this.shoe.id]));
+        console.log("THAT ONE");
+      }
+      console.log("ITEMS", localStorage.getItem("items"));
       this.UpdateCartState();
     },
     UpdateCartState() {

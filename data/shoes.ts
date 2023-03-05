@@ -72,9 +72,15 @@ export default function Shoes(request: any) {
           return shoe.category === request.shoes.category;
         });
       } else if (request.shoes.id) {
-        objects.shoes = shoes.filter((shoe: any) => {
-          return shoe.id == request.shoes.id;
-        });
+        if (typeof request.shoes.id == "object") {
+          objects.shoes = shoes.filter((shoe: any) => {
+            return request.shoes.id.includes(shoe.id);
+          });
+        } else {
+          objects.shoes = shoes.filter((shoe: any) => {
+            return shoe.id == request.shoes.id;
+          });
+        }
       } else {
         objects.shoes = shoes;
       }

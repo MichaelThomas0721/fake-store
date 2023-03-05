@@ -11,7 +11,8 @@ export default {
   methods: {
     UpdateCart() {
       if (!localStorage) return;
-      this.cartItems = localStorage.getItem("items");
+      let cartLength = JSON.parse(localStorage.getItem("items")).length;
+      this.cartItems = cartLength;
     }
   },
 }
