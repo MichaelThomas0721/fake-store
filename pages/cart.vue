@@ -21,5 +21,5 @@ export default ({
 </script>
 
 <template>
-<CartItem />
+<CartItem v-for="cartItem in cartItems" :item="cartItem"/>
 </template>
