@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
+  plugins: [{ src: "~/plugins/vue-stripe.js", ssr: false, mode: 'client' }],
   build: {
     postcss: {
       postcssOptions: {
@@ -20,4 +21,7 @@ export default defineNuxtConfig({
       fs: require.resolve("rollup-plugin-node-builtins"),
     },
   },
+  // env: {
+  //   STRIPE_PK: process.env.STRIPE_PK,
+  // },
 });
