@@ -38,11 +38,11 @@ export default {
     </div>
     <div>
       <p>Checkout</p>
-      <p>Subtotal: {{ totalPrice }}</p>
+      <p>Subtotal: {{ subtotal }}</p>
       <p>Estimated Delivery & Handling: Free</p>
       <p>Estimated Taxes: {{ taxes }}</p>
       <p>Total: {{ total }}</p>
-      <button class="bg-black rounded-full text-white w-full p-3">
+      <button class="bg-green-700 rounded-full text-white w-full p-3">
         Checkout
       </button>
     </div>

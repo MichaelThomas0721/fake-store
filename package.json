@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@vue-stripe/vue-stripe": "^4.5.0",
+    "body-parser": "^1.20.2",
     "oh-vue-icons": "^1.0.0-rc3",
+    "stripe": "^11.13.0",
     "tailwindcss": "^3.2.7"
   }
 }

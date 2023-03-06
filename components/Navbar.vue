@@ -16,7 +16,7 @@ export default {
   },
   props: {
     cartItems: {
-      type: Number,
+      type: String,
       default: 0,
     },
   },
