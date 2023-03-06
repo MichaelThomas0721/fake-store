@@ -1,5 +1,6 @@
 <script>
 import Shoes from "~/data/shoes";
+import DataFetcher from "~/data/dataFetcher";
 
 export default {
   data() {
@@ -15,11 +16,22 @@ export default {
     if (!localStorage) return;
     let items = JSON.parse(localStorage.getItem("items"));
     if (items) {
-      let shoeItems = Shoes({ shoes: { id: items } });
-      this.cartItems = shoeItems.shoes;
-      this.cartItemsNum = shoeItems.shoes.length;
+      let shoeItems = [];
+      for (let item in items) {
+        console.log("item:", item);
+        let shoe = DataFetcher({
+          type: "shoes",
+          value: { type: "id", value: items[item].id, final: true },
+        });
+        if (shoe) shoe = shoe[0];
+        shoe.size = items[item].size;
+        shoe.quantity = items[item].quantity;
+        shoeItems.push(shoe);
+      }
+      this.cartItems = shoeItems;
+      this.cartItemsNum = shoeItems.length;
       let sTotal = 0;
-      shoeItems.shoes.forEach((item) => {
+      shoeItems.forEach((item) => {
         sTotal += item.price;
       });
       this.subtotal = sTotal;
@@ -27,6 +39,23 @@ export default {
       this.total = this.subtotal + this.taxes;
     }
   },
+  methods: {
+    Checkout() {
+      let data = fetch("http://localhost:3000/api/stripe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          items: this.cartItems,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          window.location.href = data.url;
+        });
+    }
+  }
 };
 </script>
 
@@ -42,7 +71,7 @@ export default {
       <p>Estimated Delivery & Handling: Free</p>
       <p>Estimated Taxes: {{ taxes }}</p>
       <p>Total: {{ total }}</p>
-      <button class="bg-green-700 rounded-full text-white w-full p-3">
+      <button @click="Checkout" class="bg-green-700 rounded-full text-white w-full p-3">
         Checkout
       </button>
     </div>

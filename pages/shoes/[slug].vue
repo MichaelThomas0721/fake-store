@@ -1,5 +1,6 @@
 <script>
 import Shoes from "~/data/shoes";
+import DataFetcher from "~/data/dataFetcher";
 
 function CreateURLs(length) {
   let images = [];
@@ -16,7 +17,8 @@ export default {
     if (route.params.slug) {
       slug = route.params.slug;
     }
-    let shoe = Shoes({ shoes: { id: slug } }).shoes[0];
+    let shoe = DataFetcher({ type: "shoes", value: { type: 'id', value: slug, final: true } },)[0];
+    console.log(shoe);
     let imageURLs = CreateURLs(shoe.images);
     return { slug, imageURLs, shoe };
   },

@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from "http";
 
+import DataFetcher from "./../../data/dataFetcher";
 import Stripe from "stripe";
-import bodyParser from "body-parser";
 
 // let bodyParser = require('body-parser')
 
@@ -23,14 +23,16 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
       payment_method_types: ["card"],
       mode: "payment",
       line_items: body.items.map((item) => {
-        const storeItem = storeItems.get(item.id);
+        let storeItem = DataFetcher({ type: "shoes", value: { type: "id", value: item.id, final: true } });
+        if (storeItem) storeItem = storeItem[0];
+        storeItem.quantity = item.quantity;
         return {
           price_data: {
             currency: "usd",
             product_data: {
               name: storeItem.name,
             },
-            unit_amount: storeItem.priceInCents,
+            unit_amount: storeItem.price,
           },
           quantity: item.quantity,
         };

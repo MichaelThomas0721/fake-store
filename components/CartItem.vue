@@ -21,6 +21,7 @@ export default {
     <div class="flex flex-col">
       <p>{{ item.name }}</p>
       <p>{{ item.price }}</p>
+      <p>{{ item.size }}</p>
     </div>
   </div>
 </template>

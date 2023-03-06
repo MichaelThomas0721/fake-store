@@ -1,4 +1,4 @@
-export default function Shoes(request: any) {
+export default function Shoes() {
   let objects = {} as any;
   let categories = [
     "Basketball Shoes",
@@ -21,7 +21,7 @@ export default function Shoes(request: any) {
     {
       id: 2,
       name: "Adidas",
-      category: "Basketball Shoes",
+      category: "Tennis Shoes",
       price: 200,
       imageFolder: "/nikeairjordan1",
       images: 8,
@@ -37,7 +37,7 @@ export default function Shoes(request: any) {
     {
       id: 4,
       name: "Puma",
-      category: "Basketball Shoes",
+      category: "Running Shoes",
       price: 300,
       imageFolder: "/nikeairjordan1",
       images: 8,
@@ -59,37 +59,42 @@ export default function Shoes(request: any) {
       images: 8,
     },
   ];
-  if (request) {
-    if (request.categories) {
-      objects.categories = categories;
-    }
-    if (request.gender) {
-      objects.gender = gender;
-    }
-    if (request.shoes) {
-      if (request.shoes.category) {
-        objects.shoes = shoes.filter((shoe: any) => {
-          return shoe.category === request.shoes.category;
-        });
-      } else if (request.shoes.id) {
-        if (typeof request.shoes.id == "object") {
-          objects.shoes = shoes.filter((shoe: any) => {
-            return request.shoes.id.includes(shoe.id);
-          });
-        } else {
-          objects.shoes = shoes.filter((shoe: any) => {
-            return shoe.id == request.shoes.id;
-          });
-        }
-      } else {
-        objects.shoes = shoes;
-      }
-    }
-  } else {
-    objects.categories = categories;
-    objects.gender = gender;
-    objects.shoes = shoes;
-  }
+
+  objects.categories = categories;
+  objects.gender = gender;
+  objects.shoes = shoes;
+
+  // if (request) {
+  //   if (request.categories) {
+  //     objects.categories = categories;
+  //   }
+  //   if (request.gender) {
+  //     objects.gender = gender;
+  //   }
+  //   if (request.shoes) {
+  //     if (request.shoes.category) {
+  //       objects.shoes = shoes.filter((shoe: any) => {
+  //         return shoe.category === request.shoes.category;
+  //       });
+  //     } else if (request.shoes.id) {
+  //       if (typeof request.shoes.id == "object") {
+  //         objects.shoes = shoes.filter((shoe: any) => {
+  //           return request.shoes.id.includes(shoe.id);
+  //         });
+  //       } else {
+  //         objects.shoes = shoes.filter((shoe: any) => {
+  //           return shoe.id == request.shoes.id;
+  //         });
+  //       }
+  //     } else {
+  //       objects.shoes = shoes;
+  //     }
+  //   }
+  // } else {
+  //   objects.categories = categories;
+  //   objects.gender = gender;
+  //   objects.shoes = shoes;
+  // }
 
   return objects;
 }

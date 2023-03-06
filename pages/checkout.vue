@@ -2,7 +2,6 @@
 export default {
   methods: {
     Checkout() {
-      console.log("CLICKED");
       let data = fetch("http://localhost:3000/api/stripe", {
         method: "POST",
         headers: {
@@ -17,7 +16,6 @@ export default {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log("I HOPE THIS WORKS");
           window.location.href = data.url;
         });
     },
