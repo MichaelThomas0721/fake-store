@@ -42,19 +42,27 @@ export default {
     },
     AddToCart() {
       if (!localStorage) return;
+      // localStorage.setItem("items", JSON.stringify([])); // Clear cart
       let items = JSON.parse(localStorage.getItem("items"));
-      console.log(items)
-      console.log(typeof items);
-      if (typeof items == Array || typeof items == "object") {
-        items.push(this.shoe.id);
-        localStorage.setItem("items", JSON.stringify(items));
-        console.log("THIS ONE");
+      if (items) {
+        items = this.CartManager(items);
       } else {
-        localStorage.setItem("items", JSON.stringify([this.shoe.id]));
-        console.log("THAT ONE");
+        items = this.CartManager([]);
       }
-      console.log("ITEMS", localStorage.getItem("items"));
+      localStorage.setItem("items", JSON.stringify(items));
+
       this.UpdateCartState();
+    },
+    CartManager(items) {
+      let foundShoe = items.find(
+        (item) => item.id == this.shoe.id && item.size == this.selectedSize
+      );
+      if (foundShoe) {
+        foundShoe.quantity += 1;
+      } else {
+        items.push({ id: this.shoe.id, quantity: 1, size: this.selectedSize });
+      }
+      return items;
     },
     UpdateCartState() {
       this.$emit("updateCart");
