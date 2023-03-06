@@ -13,7 +13,14 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-96 relative">
-    <img :src="'/assets/images' + item.imageFolder + '/1.png'" class="w-full h-full object-contain"/>
+  <div class="w-full h-36 relative flex flex-row">
+    <img
+      :src="'/assets/images' + item.imageFolder + '/1.png'"
+      class="h-full aspect-square object-contain"
+    />
+    <div class="flex flex-col">
+      <p>{{ item.name }}</p>
+      <p>{{ item.price }}</p>
+    </div>
   </div>
 </template>

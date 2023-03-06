@@ -40,14 +40,15 @@ export default {
         :pageUrl="button.pageUrl"
         :text="button.text"
       />
-      <button
+      <a
         class="flex flex-row text-white justify-center items-center wrenchAnimation pointer-events-auto"
+        href="/cart"
       >
         <v-icon name="bi-bag" inverse scale="2" />
         <p class="absolute translate-y-[3px] pointer-events-none">
           {{ cartItems }}
         </p>
-      </button>
+      </a>
     </div>
   </div>
 </template>
