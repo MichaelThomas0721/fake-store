@@ -1,6 +1,9 @@
 Implement filters properly - Done
-Design and Create a homepage
+Design and Create a homepage - Done
 Finish cart page
+Finish Product Page
 Redo colours
 Make mobile friendly
 Add More Shoes (ALOT MORE)
+Design a logo
+Redo Navbar
