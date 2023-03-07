@@ -75,9 +75,9 @@ const baseURL = "/assets/images/nikeairjordan1/";
 </script>
 
 <template>
-  <div>
-    <div class="flex flex-row">
-      <div class="display-grid">
+  <div class="flex flex-row justify-center items-center mt-5">
+    <div class="flex flex-row flex-wrap gap-8">
+      <div class="display-grid h-fit">
         <div class="flex flex-col gap-1">
           <SmallPreview
             v-for="(image, index) in imageURLs"

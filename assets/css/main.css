@@ -16,7 +16,7 @@
 
 .display-grid {
   display: grid;
-  grid-template-rows: 40em 40em;
+  grid-template-rows: 40em;
   grid-template-columns: auto;
   gap: 0px 0px;
   grid-template-areas: ". .";
