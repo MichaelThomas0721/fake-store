@@ -9,8 +9,8 @@ export default {
     return {
       navButtons: [
         { pageUrl: "/", text: "Home" },
-        { pageUrl: "/shoes", text: "Men's Shoes" },
-        { pageUrl: "/shoes", text: "Women's Shoes" },
+        { pageUrl: "/shoes?Gender=Men%27s", text: "Men's Shoes" },
+        { pageUrl: "/shoes?Gender=Women%27s", text: "Women's Shoes" },
       ],
     };
   },

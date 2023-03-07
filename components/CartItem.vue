@@ -13,7 +13,7 @@ export default {
   <div class="w-full h-36 relative flex flex-row">
     <img
       :src="'/assets/images' + item.imageFolder + '/1.png'"
-      class="h-full aspect-square object-contain"
+      class="h-full aspect-square object-cover"
     />
     <div class="flex flex-col">
       <p>{{ item.name }}</p>

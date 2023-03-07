@@ -53,7 +53,6 @@ export default {
 </script>
 
 <template>
-  <button @click="ToggleFilter('YuhNuh', 'YUHd')">YUH</button>
   <div class="bg-gradient-to-b to-[#deddcf] from-[#ebeff7]">
     <h1
       class="text-6xl font-bold text-center p-12 border-b-[1px] border-gray-300"
