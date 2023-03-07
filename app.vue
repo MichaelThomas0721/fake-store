@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="bg-[#f5f5f5]">
     <Navbar :cartItems="cartItems"/>
     <NuxtPage @updateCart="UpdateCart"/>
   </div>

@@ -3,30 +3,27 @@
 @tailwind utilities;
 
 #app {
-    @apply min-h-screen font-sans;
-  }
+  @apply min-h-screen font-sans;
+}
 
 .store-grid {
-  display: grid; 
-  grid-template-columns: 15em auto; 
-  grid-template-rows: auto; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". ."; 
+  display: grid;
+  grid-template-columns: 15em auto;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
 }
 
 .display-grid {
-  display: grid; 
-  grid-template-rows: 40em 40em; 
-  grid-template-columns: auto; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". ."; 
+  display: grid;
+  grid-template-rows: 40em 40em;
+  grid-template-columns: auto;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
 }
 
 .testclass {
   background-color: purple;
-  
 }
 
 .wrenchAnimation:hover {
@@ -36,29 +33,29 @@
 }
 
 @keyframes my-animation {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  25%{
+  25% {
     transform: rotate(10deg);
   }
-  75%{
+  75% {
     transform: rotate(-10deg);
   }
-  100%{
+  100% {
     transform: rotate(0deg);
   }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(1deg);
-    },
-    100% {
-        transform: rotate(50deg);
-    }
-    
+  0% {
+    transform: rotate(1deg);
+  }
+  ,
+  100% {
+    transform: rotate(50deg);
+  }
 }
 .animate-test :hover {
-    animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }

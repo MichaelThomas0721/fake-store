@@ -54,26 +54,32 @@ export default {
         .then((data) => {
           window.location.href = data.url;
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <template>
-  <div class="flex flex-row">
-    <div class="flex flex-col">
-      <p>Cart</p>
-      <CartItem v-for="cartItem in cartItems" :item="cartItem" />
-    </div>
-    <div>
-      <p>Checkout</p>
-      <p>Subtotal: {{ subtotal }}</p>
-      <p>Estimated Delivery & Handling: Free</p>
-      <p>Estimated Taxes: {{ taxes }}</p>
-      <p>Total: {{ total }}</p>
-      <button @click="Checkout" class="bg-green-700 rounded-full text-white w-full p-3">
-        Checkout
-      </button>
+  <div class="max-w-7xl h-full m-auto">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col gap-1 max-w-3xl w-full">
+        <p class="text-2xl mb-3">Cart</p>
+        <CartItem v-for="cartItem in cartItems" :item="cartItem" />
+      </div>
+      <div class="text-lg max-w-sm w-full flex flex-col gap-3">
+        <p class="text-2xl mb-3">Checkout</p>
+        <CheckoutText title="Subtotal" :value="'$' + subtotal" />
+        <CheckoutText title="Estimated Shipping" :value="'Free'" />
+        <CheckoutText title="Estimated Taxes" :value="'$' + taxes" />
+        <div class="w-full h-[1px] bg-gray-600 my-3"/>
+        <CheckoutText title="Total" :value="'$' + total" />
+        <button
+          @click="Checkout"
+          class="bg-green-700 rounded-full text-white w-full p-3"
+        >
+          Checkout
+        </button>
+      </div>
     </div>
   </div>
 </template>
