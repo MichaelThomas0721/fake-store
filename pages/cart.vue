@@ -18,7 +18,6 @@ export default {
     if (items) {
       let shoeItems = [];
       for (let item in items) {
-        console.log("item:", item);
         let shoe = DataFetcher({
           type: "shoes",
           value: { type: "id", value: items[item].id, final: true },
@@ -60,7 +59,7 @@ export default {
 </script>
 
 <template>
-  <div class="max-w-7xl h-full m-auto">
+  <div class="max-w-7xl w-full h-full mx-auto my-5">
     <div class="flex flex-row justify-between">
       <div class="flex flex-col gap-1 max-w-3xl w-full">
         <p class="text-2xl mb-3">Cart</p>

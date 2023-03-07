@@ -1,7 +1,6 @@
 import Shoes from "./shoes";
 
 export default function DataFetcher(request: any) {
-    console.log(request);
   return Filter(request, Shoes());
 }
 

@@ -6,7 +6,7 @@ export default {
       shoes: Shoes(),
       pageTitle: "Mens Shoes",
     };
-  },
+  }
 };
 </script>
 

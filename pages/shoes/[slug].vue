@@ -18,7 +18,6 @@ export default {
       slug = route.params.slug;
     }
     let shoe = DataFetcher({ type: "shoes", value: { type: 'id', value: slug, final: true } },)[0];
-    console.log(shoe);
     let imageURLs = CreateURLs(shoe.images);
     return { slug, imageURLs, shoe };
   },

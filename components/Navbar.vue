@@ -9,8 +9,8 @@ export default {
     return {
       navButtons: [
         { pageUrl: "/", text: "Home" },
-        { pageUrl: "/shoes", text: "Shoes" },
-        { pageUrl: "/hats", text: "Hats" },
+        { pageUrl: "/shoes", text: "Men's Shoes" },
+        { pageUrl: "/shoes", text: "Women's Shoes" },
       ],
     };
   },
@@ -31,7 +31,7 @@ export default {
     <div
       class="p-8 border-4 border-white rounded-lg flex items-center text-white text-2xl font-bold"
     >
-      <p>Nice Apparel</p>
+      <p>Sneak Easy</p>
     </div>
     <div class="flex flex-row gap-10 h-full items-center mx-3">
       <NavButton

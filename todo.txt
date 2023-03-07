@@ -1,0 +1,5 @@
+Implement filters properly
+Design and Create a homepage
+Finish cart page
+Redo colours
+Make mobile friendly

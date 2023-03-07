@@ -17,7 +17,6 @@ const storeItems = new Map([
 export default async (req: IncomingMessage, res: ServerResponse) => {
   let returnData = "" as any;
   const body = await readBody(req as any);
-  console.log("body", body);
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
