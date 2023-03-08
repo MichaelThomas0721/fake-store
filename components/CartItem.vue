@@ -43,7 +43,7 @@ export default {
 <template>
   <div class="w-full h-36 relative flex flex-row shadow-lg">
     <img
-      :src="'/assets/images' + item.imageFolder + '/1.png'"
+      :src="'/images' + item.imageFolder + '/1.png'"
       class="h-full aspect-square object-cover"
     />
     <div class="flex flex-col">

@@ -71,7 +71,7 @@ export default {
   },
 };
 
-const baseURL = "/assets/images/nikeairjordan1/";
+const baseURL = "/images/nikeairjordan1/";
 </script>
 
 <template>

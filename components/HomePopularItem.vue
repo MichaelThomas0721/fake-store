@@ -50,7 +50,7 @@ export default {
   >
     <img
       class="h-[90%] w-full object-cover"
-      :src="'/assets/images' + popularItem.imageFolder + '/1.png'"
+      :src="'/images' + popularItem.imageFolder + '/1.png'"
     />
     <p class="">{{ popularItem.name }}</p>
   </button>
