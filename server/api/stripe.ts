@@ -26,7 +26,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
             product_data: {
               name: storeItem.name,
             },
-            unit_amount: storeItem.price,
+            unit_amount: storeItem.price * 100,
           },
           quantity: item.quantity,
         };

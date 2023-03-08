@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="h-24 p-3 w-full bg-green-800 flex flex-row justify-between">
+  <div class="h-24 p-3 w-full bg-header flex flex-row justify-between">
     <div
       class="p-8 border-4 border-white rounded-lg flex items-center text-white text-2xl font-bold"
     >

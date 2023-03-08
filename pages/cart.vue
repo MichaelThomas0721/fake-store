@@ -71,9 +71,9 @@ export default {
       this.cartItems.forEach((item) => {
         sTotal += item.price * item.quantity;
       });
-      this.subtotal = sTotal;
-      this.taxes = sTotal * 0.13;
-      this.total = this.subtotal + this.taxes;
+      this.subtotal = Math.round(sTotal * 100) / 100;
+      this.taxes = Math.round(sTotal * 0.13 * 100) / 100;
+      this.total = Math.round((this.subtotal + this.taxes) * 100) / 100;
     },
   },
 };
@@ -100,7 +100,7 @@ export default {
         <CheckoutText title="Total" :value="'$' + total" />
         <button
           @click="Checkout"
-          class="bg-green-700 hover:bg-green-900 rounded-full text-white w-full p-3"
+          class="bg-header hover:bg-tertiary rounded-full text-white w-full p-3"
         >
           Checkout
         </button>

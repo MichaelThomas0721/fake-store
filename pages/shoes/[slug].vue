@@ -98,7 +98,7 @@ export default {
           @update="ChangeSize"
         />
         <button
-          class="text-white w-full h-12 rounded-full bg-gray-900 hover:bg-gray-700"
+          class="text-white w-full h-12 rounded-full bg-header hover:bg-tertiary"
           @click="AddToCart"
         >
           Add to Cart

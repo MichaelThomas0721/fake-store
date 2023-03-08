@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 #app {
-  @apply min-h-screen font-sans;
+  @apply min-h-screen font-roboto;
+}
+
+.homeBtn {
+  @apply p-3 bg-header hover:bg-tertiary text-background text-center border-2 border-black w-1/2 rounded-xl
 }
 
 .store-grid {
@@ -20,10 +25,6 @@
   grid-template-columns: auto;
   gap: 0px 0px;
   grid-template-areas: ". .";
-}
-
-.testclass {
-  background-color: purple;
 }
 
 .wrenchAnimation:hover {

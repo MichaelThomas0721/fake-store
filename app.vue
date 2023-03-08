@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div id="app" class="bg-[#f5f5f5] min-h-screen w-full flex flex-col">
+  <div id="app" class="min-h-screen w-full flex flex-col font-roboto" style="background-color: #F2F2F2;">
     <Navbar :cartItems="cartItems"/>
     <NuxtPage @updateCart="UpdateCart"/>
     <Footer />

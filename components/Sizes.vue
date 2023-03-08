@@ -24,7 +24,7 @@ export default {
       v-for:="size in sizes"
       :key="size"
       :class="`text-2xl  border-2 border-gray-300 hover:border-gray-700 bg-gray-200 ${
-        selectedSize == size ? 'font-bold text-gray-800' : 'font-semibold text-gray-500'
+        selectedSize == size ? 'font-bold text-gray-800 bg-secondary bg-opacity-50' : 'font-semibold text-gray-500'
       }`"
       @click="() => UpdateParentState(size)"
       class="w-24 h-10 bg-slate-100 rounded-md m-2"

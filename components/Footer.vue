@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <footer class="bg-gray-800 py-4 mt-auto">
+  <footer class="bg-header py-4 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between">
         <p class="text-gray-300">

@@ -43,9 +43,10 @@ export default {
 </script>
 
 <template>
+  <h3 class="text-center text-3xl font-semibold my-4">Popular</h3>
   <div
     ref="grabscroll"
-    class="w-full overflow-x-scroll my-5"
+    class="w-full overflow-x-scroll mb-5 scrollbar-hide"
     @mousedown="ScrollHandler"
   >
     <div class="flex flex-row gap-6 w-fit">

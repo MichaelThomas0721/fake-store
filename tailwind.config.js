@@ -11,10 +11,22 @@ module.exports = {
     "!./node_modules",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        header: "#1C2C40",
+        primary: "#6387A6",
+        secondary: "#AAADBF",
+        tertiary: "#3C5973",
+        background: "#F2F2F2",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 };
