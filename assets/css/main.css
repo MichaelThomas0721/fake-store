@@ -22,7 +22,7 @@
 .display-grid {
   display: grid;
   grid-template-rows: 40em;
-  grid-template-columns: auto;
+  grid-template-columns: auto auto-fit;
   gap: 0px 0px;
   grid-template-areas: ". .";
 }

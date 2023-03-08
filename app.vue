@@ -11,6 +11,7 @@ export default {
   methods: {
     UpdateCart() {
       if (!localStorage) return;
+      if (!localStorage.getItem("items")) return;
       let cartLength = JSON.parse(localStorage.getItem("items")).length;
       this.cartItems = cartLength;
     }

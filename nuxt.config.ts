@@ -21,7 +21,10 @@ export default defineNuxtConfig({
       fs: require.resolve("rollup-plugin-node-builtins"),
     },
   },
-  // env: {
-  //   STRIPE_PK: process.env.STRIPE_PK,
-  // },
+  head: {
+    title: "Sneak Easy",
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ]
+  }
 });

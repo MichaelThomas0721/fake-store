@@ -85,7 +85,7 @@ export default {
             @update="ChangeImage"
           />
         </div>
-        <div class="h-full relative">
+        <div class="h-full w-fit max-w-[40em] relative">
           <img :src="primaryImage" class="h-full object-contain" />
         </div>
       </div>

@@ -11,7 +11,7 @@
     </div>
 
     <div
-      class="max-w-2xl w-full h-full relative"
+      class="max-w-2xl w-full h-full relative pointer-events-none"
     >
       <img
         src="/assets/images/Replacement.webp"
