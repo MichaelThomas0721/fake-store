@@ -2,12 +2,14 @@ Implement filters properly - Done
 Design and Create a homepage - Done
 Finish cart page - Done
 Finish Product Page - Done
-Success and Fail page for Stripe
+Success and Fail page for Stripe - Done
+Fix Images in Production
 Redo colours
 Make mobile friendly
 Add More Shoes (ALOT MORE)
 Design a logo
 Redo Navbar
+Make the success page pretty
 
 Finishing Touches:
 Make buttons more interactive (Product page and Cart)
