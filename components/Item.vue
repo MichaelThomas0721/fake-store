@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="'/shoes/' + props.item.id" class="w-96 h-fit relative bg-[#f5f5f5] rounded-sm drop-shadow-lg p-3">
+  <a :href="'/shoes/' + props.item.id" class="w-96 h-fit relative bg-background rounded-sm drop-shadow-lg p-3">
     <img :src="'/images' + props.item.imageFolder + '/1.png'" class="w-full aspect-square object-contain" />
     <div>
       <p>{{ props.item.name }}</p>
