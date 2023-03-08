@@ -3,10 +3,10 @@ Design and Create a homepage - Done
 Finish cart page - Done
 Finish Product Page - Done
 Success and Fail page for Stripe - Done
-Fix Images in Production
-Redo colours
-Make mobile friendly
+Fix Images in Production - Done
 Add More Shoes (ALOT MORE)
+Make mobile friendly
+Redo colours
 Design a logo
 Redo Navbar
 Make the success page pretty
@@ -14,3 +14,4 @@ Make the success page pretty
 Finishing Touches:
 Make buttons more interactive (Product page and Cart)
 Organize Products page better
+Lighthouse Improvements  

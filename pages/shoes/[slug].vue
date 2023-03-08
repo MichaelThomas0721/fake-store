@@ -1,11 +1,10 @@
 <script>
-import Shoes from "~/data/shoes";
 import DataFetcher from "~/data/dataFetcher";
 
-function CreateURLs(length) {
+function CreateURLs(length, imageFolder) {
   let images = [];
   for (let i = 1; i <= length; i++) {
-    images.push(baseURL + i + ".png");
+    images.push("/images" + imageFolder + "/" + i + ".png");
   }
   return images;
 }
@@ -18,7 +17,7 @@ export default {
       slug = route.params.slug;
     }
     let shoe = DataFetcher({ type: "shoes", value: { type: 'id', value: slug, final: true } },)[0];
-    let imageURLs = CreateURLs(shoe.images);
+    let imageURLs = CreateURLs(shoe.images, shoe.imageFolder);
     return { slug, imageURLs, shoe };
   },
   data() {
@@ -70,8 +69,6 @@ export default {
     },
   },
 };
-
-const baseURL = "/images/nikeairjordan1/";
 </script>
 
 <template>
