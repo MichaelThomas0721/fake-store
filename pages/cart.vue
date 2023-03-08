@@ -100,7 +100,7 @@ export default {
         <CheckoutText title="Total" :value="'$' + total" />
         <button
           @click="Checkout"
-          class="bg-green-700 rounded-full text-white w-full p-3"
+          class="bg-green-700 hover:bg-green-900 rounded-full text-white w-full p-3"
         >
           Checkout
         </button>
