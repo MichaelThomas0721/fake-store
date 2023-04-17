@@ -1,31 +1,6 @@
-# Nuxt 3 Starter Kit
+# Sneak Easy (Mock E-Commerce)
 
-This is a Nuxt 3 Starter Kit with Vite, Vue 3, TypeScript, PostCSS and TailwindCSS!
+This is a mock e-commerce store with stripe implementation using the Nuxtjs (Vue) framework.
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
-
-## Setup
-
-Make sure to install the dependencies
-
-```bash
-yarn install
-```
-
-## Development
-
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Stripe has a list of fake credit cards to use (DO NOT use your real credit card) that will validate.
+Example: Visa, 4242424242424242, 123 (any 3 numbers), 12/32 (any future date)
