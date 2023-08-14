@@ -44,6 +44,7 @@ export default {
     $route: {
       handler: function () {
         let query = this.$route.query;
+        this.query = query;
         this.displayItems = Filter(this.items, query);
       },
       deep: true,
@@ -54,10 +55,8 @@ export default {
 
 <template>
   <div class="">
-    <h1
-      class="text-6xl font-bold text-center p-12 border-b-[1px] border-gray-300"
-    >
-      {{ pageTitle }}
+    <h1 class="text-6xl font-bold text-center p-12 border-b-[1px] border-gray-300">
+      {{ (query?.["Gender"] || "") + " " + (query?.["Category"] || "") }}
     </h1>
     <div class="h-full w-full text-black store-grid">
       <Filters :categories="categories" :gender="gender" />
