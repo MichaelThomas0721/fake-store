@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     Checkout() {
-      fetch("http://localhost:3000/api/stripe", {
+      fetch(this.$config.ABS_URL + "/api/stripe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

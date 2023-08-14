@@ -2,7 +2,7 @@
 export default {
   methods: {
     Checkout() {
-      let data = fetch("http://localhost:3000/api/stripe", {
+      let data = fetch(this.$config.ABS_URL + "/api/stripe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

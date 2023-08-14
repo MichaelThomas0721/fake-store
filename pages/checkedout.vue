@@ -7,7 +7,7 @@ export default {
       session_id = route.query.session_id;
     }
     let sessionDetails;
-    await fetch("http://localhost:3000/api/stripeCheckedout", {
+    await fetch(this.$config.ABS_URL + "/api/stripeCheckedout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

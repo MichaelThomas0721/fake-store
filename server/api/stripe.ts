@@ -7,6 +7,7 @@ const pk = import.meta.env.VITE_STRIPE_SK as string;
 const stripe = new Stripe(pk, {} as any);
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
+  const config = useRuntimeConfig()
   let returnData = "" as any;
   const body = await readBody(req as any);
   try {
@@ -31,8 +32,8 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
           quantity: item.quantity,
         };
       }),
-      success_url: `http://localhost:3000/checkedout?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3000/cart`,
+      success_url: config.ABS_URL + `/checkedout?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: config.ABS_URL + `/cart`,
     });
     returnData = { url: session.url };
   } catch (e) {
