@@ -21,6 +21,7 @@ export default defineNuxtConfig({
       fs: require.resolve("rollup-plugin-node-builtins"),
     },
   },
+  mode: 'universal',
   head: {
     title: "Sneak Easy",
     link: [
