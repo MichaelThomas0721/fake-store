@@ -13,10 +13,6 @@ export default {
       type: Array,
       required: true,
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
     categories: {
       type: Array,
       required: true,
