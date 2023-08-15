@@ -69,8 +69,8 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-row justify-center items-center mt-5">
-    <div class="flex flex-row flex-wrap gap-8">
+  <div class="flex flex-row justify-center items-center my-5 px-2">
+    <div class="flex flex-row flex-wrap md:gap-8">
       <div class="display-grid h-fit">
         <div class="flex flex-col gap-1">
           <SmallPreview
@@ -86,7 +86,7 @@ export default {
           <img :src="primaryImage" class="h-full object-contain" />
         </div>
       </div>
-      <div class="h-fit w-96 overflow-hidden">
+      <div class="h-fit md:w-96 max-w-full overflow-hidden px-8">
         <p>{{ shoe.name }}</p>
         <p>Price ${{ shoe.price }}</p>
         <Sizes
