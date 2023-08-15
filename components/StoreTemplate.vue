@@ -54,10 +54,10 @@ export default {
     <h1 class="text-6xl font-bold text-center p-12 border-b-[1px] border-gray-300">
       {{ (query?.["Gender"] || "") + " " + (query?.["Category"] || "") }}
     </h1>
-    <div class="h-full w-full text-black store-grid">
+    <div class="h-full w-full text-black flex flex-col md:flex-row">
       <Filters :categories="categories" :gender="gender" />
 
-      <div class="flex flex-row flex-wrap gap-5 p-5">
+      <div class="flex flex-row flex-wrap gap-5 p-5 flex-grow">
         <Item v-for="item in displayItems" :key="item.name" :item="item" />
       </div>
     </div>
