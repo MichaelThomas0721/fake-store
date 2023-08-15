@@ -14,5 +14,5 @@ export default {
 </script>
 
 <template>
-  <a class="text-white hover:text-slate-300 text-xl font-semibold" :href="pageUrl"> {{ text }}</a>
+  <a class="text-white hover:text-slate-300 text-md md:text-xl font-semibold" :href="pageUrl"> {{ text }}</a>
 </template>

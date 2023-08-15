@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <h3 class="text-center text-3xl font-semibold my-4">Popular</h3>
+  <h3 class="text-center text-3xl font-semibold my-4 w-full">Popular</h3>
   <div
     ref="grabscroll"
     class="w-full overflow-x-scroll mb-5 scrollbar-hide"

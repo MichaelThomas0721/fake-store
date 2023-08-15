@@ -27,15 +27,15 @@ export default {
 </script>
 
 <template>
-  <div class="h-24 p-3 w-full bg-header flex flex-row justify-between">
-    <a href="/" class="h-full aspect-square">
+  <div class="h-24 p-3 w-full bg-header flex flex-row justify-between items-center overflow-hidden">
+    <a href="/" class="h-1/2 sm:h-3/4 md:h-full aspect-square">
       <img
         src="/SneakEasyLogo.svg"
         alt="SneakEasy Logo"
         class="w-full h-full"
       />
     </a>
-    <div class="flex flex-row gap-10 h-full items-center mx-3">
+    <div class="flex flex-row gap-1 md:gap-10 h-full items-center mx-3 overflow-hidden">
       <NavButton
         v-for="button in navButtons"
         :key="button.text"
